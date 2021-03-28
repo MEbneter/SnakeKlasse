@@ -7,7 +7,7 @@ package model;
  */
 public class Snake {
 	
-	private boolean hindered=true;
+	private boolean free=true;
 	private int length;
 	private int xPos;
 	private int yPos;
@@ -16,7 +16,7 @@ public class Snake {
 	 * @param yPos =übergabe der xPos
 	 * @param xPos =übergabe der yPos
 	 */
-	public Snake(int yPos, int xPos) {
+	public Snake(int xPos, int yPos) {
 		this.xPos=xPos;
 		this.yPos=yPos;
 		this.length=0;
@@ -29,41 +29,41 @@ public class Snake {
 	public boolean moveUp() {
 		if (xPos > 0) {
 			xPos-=5;
-			hindered=false;
+			free=true;
 		} else {
-			hindered=true;
+			free=false;
 		}
-		return hindered;
+		return free;
 	}
 	
 	public boolean moveDown() {
 		if (xPos < 1080) {
 			xPos+=5;
-			hindered=false;
+			free=true;
 		} else {
-			hindered=true;
+			free=false;
 		}
-		return hindered;
+		return free;
 	}
 	
 	public boolean moveLeft() {
 		if (yPos > 0) {
 			yPos-=5;
-			hindered=false;
+			free=true;
 		} else {
-			hindered=true;
+			free=false;
 		}
-		return hindered;
+		return free;
 	}
 	
 	public boolean moveRight() {
 		if (yPos < 1920) {
 			yPos+=5;
-			hindered=false;
+			free=true;
 		} else {
-			hindered=true;
+			free=false;
 		}
-		return hindered;
+		return free;
 	}
 	/**
 	 * getter für x und y pos.
