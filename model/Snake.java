@@ -7,7 +7,6 @@ package model;
  */
 public class Snake {
 	
-	private boolean free=true;
 	private int length;
 	private int xPos;
 	private int yPos;
@@ -29,41 +28,37 @@ public class Snake {
 	public boolean moveUp() {
 		if (xPos > 0) {
 			xPos-=5;
-			free=true;
+			return true;
 		} else {
-			free=false;
+			return false;
 		}
-		return free;
 	}
 	
 	public boolean moveDown() {
 		if (xPos < 1080) {
 			xPos+=5;
-			free=true;
+			return true;
 		} else {
-			free=false;
+			return false;
 		}
-		return free;
 	}
 	
 	public boolean moveLeft() {
 		if (yPos > 0) {
 			yPos-=5;
-			free=true;
+			return true;
 		} else {
-			free=false;
+			return false;
 		}
-		return free;
 	}
 	
 	public boolean moveRight() {
 		if (yPos < 1920) {
 			yPos+=5;
-			free=true;
+			return true;
 		} else {
-			free=false;
+			return false;
 		}
-		return free;
 	}
 	/**
 	 * getter für x und y pos.
