@@ -18,7 +18,7 @@ public class Snake {
 	public Snake(int xPos, int yPos) {
 		this.xPos=xPos;
 		this.yPos=yPos;
-		this.length=0;
+		this.length=0; // laut pdf 0 , laut mitschüler 1 
 	}
 	/**
 	 * Methoden für move-up-down-left-right
